@@ -1,0 +1,11 @@
+
+
+<div class="contenedor">
+<p>componente3 works!</p>
+<br>
+<input type="number" [(ngModel)]="a" (ngModelChange)="calculate()" /> 
+<input type="number" [(ngModel)]="b" (ngModelChange)="calculate()" /> 
+<div *ngIf="total$ | async as total; else loading"> 
+    Total: {{ total | currency:'EUR':'symbol':'1.2-2' }} 
+</div> <ng-template #loading>Calculando…</ng-template>
+</div>
